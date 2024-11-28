@@ -17,22 +17,24 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.0",
+    "@expo/vector-icons": "^14.0.2",
+    "dom-to-image": "^2.6.0",
     "expo": "~52.0.11",
+    "expo-image-picker": "~16.0.3",
+    "expo-media-library": "~17.0.3",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.3",
-    "react-native-web": "~0.19.13",
-    "@expo/vector-icons": "^14.0.2",
-    "expo-image-picker": "~16.0.3",
     "react-native-gesture-handler": "~2.20.2",
     "react-native-reanimated": "~3.16.1",
     "react-native-view-shot": "4.0.2",
-    "expo-media-library": "~17.0.3"
+    "react-native-web": "~0.19.13"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@types/dom-to-image": "^2.6.7",
     "@types/eslint": "^9.6.1",
     "@types/react": "~18.3.12",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
