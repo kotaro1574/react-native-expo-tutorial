@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { StyleSheet, View, type ImageSourcePropType } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { StatusBar } from "expo-status-bar";
@@ -10,6 +11,8 @@ const PlaceholderImage =
   require("@/assets/images/background-image.png") as ImageSourcePropType;
 
 export default function App() {
+  const [selectedImage, setSelectedImage] = useState<null | string>(null);
+
   const pickImageAsync = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
@@ -17,7 +20,7 @@ export default function App() {
     });
 
     if (!result.canceled) {
-      console.log(result);
+      setSelectedImage(result.assets[0].uri);
     } else {
       alert("画像が選択されていません");
     }
@@ -26,7 +29,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <ImageViewer placeholderImageSource={PlaceholderImage} />
+        <ImageViewer
+          placeholderImageSource={PlaceholderImage}
+          selectedImage={selectedImage}
+        />
       </View>
       <View style={styles.footerContainer}>
         <Button theme="primary" label="写真を選択" onPress={pickImageAsync} />
