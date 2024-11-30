@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "react-native-expo-tutorial",
+    "scheme": "react-native-expo-tutorial",
     "slug": "react-native-expo-tutorial",
     "version": "1.0.0",
     "orientation": "portrait",
