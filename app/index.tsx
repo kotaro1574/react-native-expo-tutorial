@@ -6,7 +6,7 @@ export default function Page() {
     <View>
       <Text>Home page</Text>
       <Link href="/about">About</Link>
-      <Link href="(tabs)">Tabs</Link>
+      <Link href="(stacks)">Tabs</Link>
     </View>
   );
 }
